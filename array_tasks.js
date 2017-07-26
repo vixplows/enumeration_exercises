@@ -67,16 +67,16 @@ var arrayTasks = {
 	}
 	return indexArray;
 },
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
+
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var evenNums = arr.filter(function(value){
+			return value % 2 === 0;
+		})
+		var squareEvenNums = this.square(evenNums);
+		var resultArray = this.sum(squareEvenNums);
+		return resultArray;
+},
 
 }
 
 module.exports = arrayTasks
-
-// var str = "scissors";
-// var indices = [];
-// for(var i=0; i<str.length;i++) {
-//     if (str[i] === "s") indices.push(i);
-// }
