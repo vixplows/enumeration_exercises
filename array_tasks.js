@@ -32,13 +32,23 @@ var arrayTasks = {
 
 		arr.forEach(function(item) {
 			sum += item;
-		})
+		});
 		return sum;	
 	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		var rejectArray = []
+		var resultArray = []
+
+		for (item of arr) {
+			if (!resultArray.includes(item) && rejectArray.includes(item)) {
+				resultArray.push(item);
+			} else {
+				rejectArray.push(item);
+			}
+	}
+	return resultArray;
+},
 
 	// removeAndClone: function (arr, valueToRemove) {
 		
