@@ -57,10 +57,16 @@ var arrayTasks = {
 		return newArray;
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-		
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		var indexArray = [];
 
+		for (item = 0; item < arr.length; item++) {
+			if (arr[item] === itemToFind) {
+				indexArray.push(item)
+		}
+	}
+	return indexArray;
+},
 	// sumOfAllEvenNumbersSquared: function (arr) {
 		
 	// }
@@ -68,3 +74,9 @@ var arrayTasks = {
 }
 
 module.exports = arrayTasks
+
+// var str = "scissors";
+// var indices = [];
+// for(var i=0; i<str.length;i++) {
+//     if (str[i] === "s") indices.push(i);
+// }
